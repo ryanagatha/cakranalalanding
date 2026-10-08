@@ -26,3 +26,9 @@ node_modules/
 /assets/hero-pekerja.jpg
 
 /assets/cakranala-algoritma-masyarakat.png
+
+# Generated deployment output and Wrangler local state
+/dist/
+/.wrangler/
+.dev.vars
+.dev.vars.*

@@ -1,6 +1,6 @@
 # cakranalalanding
 
-Institut Cakra Nala — static institutional profile focused on algorithmic ethics, cognitive resilience, and strategic studies. Keeps the original Aksi Indonesia visual language with a teal/gold identity and original city and architectural photographs from Aksi Indonesia, without people as visual subjects.
+Institut Cakra Nala — static institutional profile focused on algorithmic ethics, cognitive resilience, and strategic studies. Keeps the original Aksi Indonesia visual language with a teal/gold identity and real city, commuter, and community photographs.
 
 ## Run locally
 
@@ -35,3 +35,11 @@ The algorithm diagram uses the [Remotion Player](https://www.remotion.dev/docs/p
 ## Learning outcome
 
 The institutional profile identifies CSCR (Certified Strategist Cognitive Resilience) certification as a learning outcome, through competency assessment and fulfillment of graduation standards. No accreditation body or automatic award is claimed.
+
+## Cloudflare Workers deployment
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Static asset directory: `dist` (configured in `wrangler.jsonc`).
+
+The build copies only the HTML, CSS, browser JavaScript, referenced images, and Remotion bundle/license into `dist/`. Do not point the assets directory at the repository root: that would include `node_modules` and development files. The output is regenerated on each build and is not committed. To preview the deployment output, run `python3 -m http.server 5184 --bind 127.0.0.1 --directory dist` after building.
