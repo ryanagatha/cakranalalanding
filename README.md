@@ -1,6 +1,6 @@
 # cakranalalanding
 
-Institut Cakra Nala — static institutional profile focused on algorithmic ethics, cognitive resilience, and strategic studies. Keeps the original Aksi Indonesia visual language with a teal/gold identity and city/citizen imagery.
+Institut Cakra Nala — static institutional profile focused on algorithmic ethics, cognitive resilience, and strategic studies. Keeps the original Aksi Indonesia visual language with a teal/gold identity and original city and architectural photographs from Aksi Indonesia, without people as visual subjects.
 
 ## Run locally
 

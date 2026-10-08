@@ -232,7 +232,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .featured-card > a { color: #ffffff; }
 .movement-card > a span { font-size: 20px; }
 
-.impact { position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin-block: 100px; border-radius: var(--radius-lg); color: #ffffff; background: linear-gradient(90deg, rgba(16, 94, 101,.98), rgba(28, 126, 135,.9)), url('assets/dampak-kota.jpg') center / cover; }
+.impact { position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin-block: 100px; border-radius: var(--radius-lg); color: #ffffff; background: linear-gradient(90deg, rgba(16, 94, 101,.98), rgba(28, 126, 135,.9)), url('assets/hero-kota.jpg') center / cover; }
 .impact::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 45%, rgba(0, 119, 200,.12)); }
 .impact > * { position: relative; z-index: 1; }
 .impact-copy { padding: clamp(48px, 6vw, 82px); background: radial-gradient(circle at 0 100%, rgba(0, 119, 200,.36), transparent 48%); }
@@ -353,7 +353,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   z-index: 0;
   inset: 0;
   pointer-events: none;
-  background: url('assets/ai-generation-silhouette.jpg') right -2% center / auto 102% no-repeat;
+  background: url('assets/cerita-koneksi.jpg') right -2% center / auto 102% no-repeat;
   filter: hue-rotate(320deg) saturate(.9) contrast(1.24) brightness(1.12);
   opacity: .58;
   mix-blend-mode: screen;
