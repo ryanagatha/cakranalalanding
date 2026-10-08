@@ -150,3 +150,17 @@ if (!('IntersectionObserver' in window)) motionTargets.forEach(element => elemen
 
 // Hero typing and per-section reveals remain active alongside Remotion.
 applyLanguage('id');
+
+// A tap pins a value photograph; keyboard focus also reveals it.
+const valueButtons = [...document.querySelectorAll('.value-reveal')];
+function closeValuePhotos() {
+  valueButtons.forEach(button => { button.classList.remove('is-open'); button.setAttribute('aria-pressed', 'false'); });
+}
+valueButtons.forEach(button => button.addEventListener('click', () => {
+  const open = !button.classList.contains('is-open');
+  closeValuePhotos();
+  button.classList.toggle('is-open', open);
+  button.setAttribute('aria-pressed', String(open));
+}));
+document.addEventListener('click', event => { if (!event.target.closest('.value-reveal')) closeValuePhotos(); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeValuePhotos(); });

@@ -353,7 +353,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   z-index: 0;
   inset: 0;
   pointer-events: none;
-  background: url('assets/cerita-koneksi.jpg') right -2% center / auto 102% no-repeat;
+  background: url('assets/hero-kota.jpg') right -2% center / auto 102% no-repeat;
   filter: hue-rotate(320deg) saturate(.9) contrast(1.24) brightness(1.12);
   opacity: .58;
   mix-blend-mode: screen;
@@ -930,3 +930,24 @@ main::before { top: 620px; background: linear-gradient(rgba(7,84,91,.035) 1px, t
   .hero-message h1 { align-items: center; }
   .hero-message .hero-rotator { width: auto; min-width: 0; }
 }
+
+/* Values reveal real photographs on hover, keyboard focus, or touch. */
+.impact-stats > .value-card { padding: 0; overflow: hidden; }
+.value-reveal { position: relative; isolation: isolate; display: flex; flex: 1; width: 100%; min-height: 180px; flex-direction: column; justify-content: center; align-items: flex-start; overflow: hidden; padding: 35px; border: 0; border-radius: 0; color: #fff; background: transparent; text-align: left; cursor: pointer; }
+.value-photo, .value-reveal::after { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 400ms ease, transform 650ms ease; }
+.value-photo { object-fit: cover; transform: scale(1.06); }
+.value-reveal::after { content: ''; background: linear-gradient(180deg, rgba(5,24,28,.28), rgba(5,24,28,.86)); }
+.value-reveal > strong, .value-reveal > span { position: relative; }
+.value-reveal > span { max-width: 24ch; font-family: var(--font-mono); line-height: 1.7; }
+.value-indicator { position: absolute; right: 16px; top: 16px; width: 16px; height: 16px; fill: none; stroke: var(--gold-light); stroke-width: 1.5; transition: transform 300ms ease; }
+.value-reveal:is(:focus-visible, .is-open) .value-photo, .value-reveal:is(:focus-visible, .is-open)::after { opacity: 1; transform: scale(1); }
+.value-reveal:is(:focus-visible, .is-open) > span { color: #fff; }
+.value-reveal.is-open .value-indicator { transform: rotate(45deg); }
+.value-reveal:focus-visible { outline: 2px solid var(--gold-light); outline-offset: -4px; }
+@media (hover: hover) {
+  .value-reveal:hover .value-photo, .value-reveal:hover::after { opacity: 1; transform: scale(1); }
+  .value-reveal:hover > span { color: #fff; }
+}
+@media (min-width: 681px) and (max-width: 1024px) { .value-reveal { min-height: 170px; padding: 26px 12px; } }
+@media (max-width: 680px) { .value-reveal { min-height: 155px; padding: 25px 14px; } }
+@media (prefers-reduced-motion: reduce) { .value-photo, .value-reveal::after, .value-indicator { transition: none; } }
