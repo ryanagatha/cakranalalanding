@@ -101,18 +101,18 @@ languageButtons.forEach(button => button.addEventListener('click', () => applyLa
 const sectionMotion = new Map();
 const motionSelector = [
   '.hero-panel > .eyebrow', '.hero-panel > h2', '.panel-description', '.about-note', '.hero-panel > .text-link',
-  '.feed-heading > div', '.citizen-photo', '.perspective-list article',
+  '.feed-heading > div', '.algorithm-panel', '.perspective-list article',
   '.manifesto-kicker', '.manifesto-copy > p', '.manifesto-copy > h2',
   '.generation-intro > .eyebrow', '.generation-intro > h2', '.generation-intro > p:not(.eyebrow)',
   '.generation-roles article', '.story-gallery figure', '.section-heading', '.movement-card',
   '.impact-copy > .eyebrow', '.impact-copy > h2', '.impact-copy > p:not(.eyebrow)', '.impact-copy > a',
-  '.impact-stats > div', '.final-cta > *'
+  '.certification-outcome', '.impact-stats > div', '.final-cta > *'
 ].join(', ');
 const motionTargets = [...document.querySelectorAll('main > section:not(.hero)')].flatMap(section => {
   const targets = [...section.querySelectorAll(motionSelector)];
   sectionMotion.set(section, targets);
   targets.forEach((element, index) => {
-    element.dataset.motion = element.matches('.citizen-photo, .story-gallery figure, .movement-card') ? 'image' : 'rise';
+    element.dataset.motion = element.matches('.algorithm-panel, .story-gallery figure, .movement-card') ? 'image' : 'rise';
     element.style.setProperty('--motion-delay', `${(index % 3) * 85}ms`);
   });
   return targets;
@@ -148,48 +148,5 @@ if ('IntersectionObserver' in window) {
 
 if (!('IntersectionObserver' in window)) motionTargets.forEach(element => element.classList.add('motion-visible'));
 
-// A single canvas preserves the original ambient city-page motion.
-function createDotField() {
-  const canvas = document.createElement('canvas');
-  canvas.className = 'dot-field';
-  canvas.setAttribute('aria-hidden', 'true');
-  document.querySelector('main').prepend(canvas);
-  const context = canvas.getContext('2d');
-  if (!context) return;
-  let width = 0, height = 0, frame = 0, lastTime = 0, dots = [];
-  function resize() {
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    width = window.innerWidth; height = window.innerHeight;
-    canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio);
-    canvas.style.width = `${width}px`; canvas.style.height = `${height}px`;
-    context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    dots = Array.from({length: Math.min(150, Math.max(38, Math.round(width * height / 12000)))}, (_, i) => ({x: Math.random() * width, y: Math.random() * height, depth: .3 + Math.random() * .7, phase: Math.random() * Math.PI * 2, gold: i % 4 === 0}));
-    paint();
-  }
-  function paint() {
-    context.clearRect(0, 0, width, height);
-    dots.forEach(dot => {
-      context.beginPath();
-      context.fillStyle = dot.gold ? `rgba(181,137,47,${.1 + dot.depth * .18})` : `rgba(7,100,108,${.06 + dot.depth * .17})`;
-      context.arc(dot.x + Math.sin(dot.phase) * 14 * dot.depth, dot.y, .7 + dot.depth * 1.2, 0, Math.PI * 2);
-      context.fill();
-    });
-  }
-  function step(time) {
-    const delta = Math.min(time - lastTime, 48); lastTime = time;
-    dots.forEach(dot => {dot.y -= dot.depth * delta * .009; dot.phase += delta * .00018; if (dot.y < -8) dot.y = height + 8;});
-    paint(); frame = requestAnimationFrame(step);
-  }
-  function sync() {
-    if (frame) cancelAnimationFrame(frame);
-    frame = 0;
-    if (!userPaused && !document.hidden) { lastTime = performance.now(); frame = requestAnimationFrame(step); }
-    else paint();
-  }
-  let resizeTimer;
-  window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(resize, 180); });
-  window.addEventListener('site-motion-change', sync);
-  resize(); sync();
-}
-createDotField();
+// Hero typing and per-section reveals remain active alongside Remotion.
 applyLanguage('id');

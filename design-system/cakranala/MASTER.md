@@ -27,3 +27,9 @@ Brand reference: `../cakranala/output/slides-v4/slide-01.png` and slides 02, 03,
 ## Image assets
 
 `assets/imagegen-prompts.json` records exact built-in ImageGen prompts. Generated city/community scenes are archived and no longer rendered. Current page photography is reused directly from the original Aksi Indonesia assets, without people; no image generation or pixel editing was used for this revision. The logo was extracted with ImageGen from the supplied slide, since no standalone original logo file was present.
+
+Latest direction: retain original Aksi Indonesia photography in the hero and add a conceptual ImageGen city/network image without faces or human figures to the editorial figure and algorithmic ethics card. Label that generated illustration; do not reintroduce generated people.
+
+Current direction supersedes the generated city/network artwork: technical editorial style with original photography, monospaced labels, precise grid lines, square-edged panels and a code-authored Remotion algorithm-flow diagram. No generated scene illustrations on the page. The global typewriter and section scroll reveals remain native web animation; Remotion controls the diagram.
+
+Learning outcome: CSCR certification (Certified Strategist Cognitive Resilience), earned through competency assessment and fulfillment of graduation standards, as directed by the user and supported by the supplied presentation.

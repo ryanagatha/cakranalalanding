@@ -1,0 +1,19 @@
+{
+  "name": "cakranalalanding",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "npm run build && python3 -m http.server 5184 --bind 127.0.0.1"
+  },
+  "dependencies": {
+    "@remotion/player": "4.0.534",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
