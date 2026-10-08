@@ -1,0 +1,22 @@
+{
+  "tool": "Built-in ImageGen",
+  "assets": [
+    {
+      "file": "assets/cakranala-kota-warga.png",
+      "role": "Hero kota dan warga",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-width hero photograph for an Indonesian institute profile website about cities, citizens, clear thinking and collective progress. Create a beautiful candid documentary photograph of everyday citizens in Jakarta on a busy but welcoming pedestrian street at golden hour. Wide 16:9 street-level composition, adults walking home from work, modest food stalls and a fruit seller, a woman in a muted teal hijab, people from different generations, cyclists in the distance, old neighborhood shopfronts with modern towers softly visible far behind, leafy shade and lived-in details. People naturally interacting and moving, no posing, nobody looking at camera, no staged corporate event. Main foreground figures and stall toward outer thirds, center retains visual breathing room for a large centered website headline. Authentic contemporary Indonesian city atmosphere, humid soft sunlight, film-like rich dark petrol teal shadows and warm golden highlights, realistic skin, restrained saturation, sophisticated editorial photography, optimistic human dignity. Do not make the entire scene artificially teal. No legible signage, no added words or graphics, no logo, no political banners, no watermarks. Image only, no website mockup. This is an illustrative city scene."
+    },
+    {
+      "file": "assets/cakranala-dialog-warga.png",
+      "role": "Ilustrasi dialog warga",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial landscape photograph for an Indonesian institute website focused on city life and citizens. Authentic candid scene of six adult neighbors in a leafy Indonesian urban kampung courtyard, sitting informally at a simple wooden table with tea glasses and a notebook, listening and exchanging ideas about their neighborhood. Mixed adult generations, a female local shopkeeper with a simple light cream hijab, a young male commuter wearing a muted teal shirt, an older man in a subtle batik shirt, other everyday citizens. A bicycle by a turquoise plaster wall, potted tropical plants, small tiled houses and a narrow lane in the background. Ordinary dignified citizens, no executives, no meeting room, no formal seminar, no flags. Observational documentary photography, 4:3 landscape composition, eye level, soft late-afternoon sunlight, warm gold highlights with natural deep teal details, real skin texture, cinematic yet believable, hopeful and human, unstaged expressions, no one looking at camera. No text, no logo, no watermark. Illustrative scene, no claim of a real institute activity."
+    },
+    {
+      "file": "assets/cakranala-logo.png",
+      "role": "Logo transparan dari referensi slide",
+      "reference": "/Users/macbook/Documents/cakranala/output/slides-v4/slide-01.png",
+      "prompt": "Use case: background-extraction. Edit target: the supplied presentation cover slide. Extract ONLY the small original Institut Cakra Nala emblem in the upper right: the teal shield with interlocking circular chakra form, central gold flame and white heart/teardrop, and small gold five-pointed star above. Return that exact emblem alone, centered on a genuinely transparent background with close padding, suitable as a website logo. Preserve its original shape, proportions, dark petrol teal and golden yellow colors and internal white shapes faithfully. Remove every other part of the slide: all title text, institute name below logo, backdrop and all imagery. Do not redesign, do not invent another emblem, no letters or lettering, no mockup, no shadows. Crisp clean edges."
+    }
+  ],
+  "notes": "Visual kota dan warga bersifat ilustratif; bukan dokumentasi kegiatan atau fasilitas institut. Visual abstrak dan rapat profesional tidak dipakai setelah arah pengguna beralih ke kota dan warga."
+}

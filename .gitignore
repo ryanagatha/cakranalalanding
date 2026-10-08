@@ -1,0 +1,29 @@
+# Local references and unused legacy source images
+.DS_Store
+**/.DS_Store
+*.zip
+/foto/
+/random wallpaper didalam project/
+/wallpaper landing page login dan awal/
+/tema.jpeg
+.env
+.env.*
+node_modules/
+/assets/ai-generation-silhouette.png
+/assets/aksi-genz-logo.png
+/assets/aksi-hero.png
+/assets/avatar-ari-anime.png
+/assets/avatar-mika-anime.png
+/assets/avatar-nara.png
+/assets/avatar-raka.png
+/assets/cerita-data.jpg
+/assets/cerita-infrastruktur.jpg
+/assets/cerita-koneksi.jpg
+/assets/cerita-pekerja.jpg
+/assets/gerakan-akses.jpg
+/assets/gerakan-lingkungan.jpg
+/assets/hero-bandung.jpg
+/assets/hero-malam.jpg
+/assets/hero-pasar.jpg
+/assets/hero-payung.jpg
+/assets/hero-pekerja.jpg
